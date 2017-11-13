@@ -1,0 +1,32 @@
+PI-Grau
+
+TOPIC 2: Services I (Web Services and Security)
+Pregunta 1. Explica los conceptos de servicio, arquitectura orientada a objetos y sistema distribuido.
+Pregunta 2. Explica brevemente el rol del protocolo WSDL (Web Services Description Language) en un
+servicio Web y como se estructura un servicio web con WSDL.
+Pregunta 3. Explica el rol de SOAP (Simple Object Access Protocol) en un servicio Web y describe el
+tipo de encapsulamiento que usa. ¿Qué diferencias hay entre un Web Service basado en JSON y
+XML?
+Pregunta 4. Explica que diferencias hay en usar RPC, RPC-XML y SOAP.
+Pregunta 5. Dibuja un esquema que defina la arquitectura de referencia de los Web Services y explica
+su funcionamiento básico.
+Pregunta 6. Explica que diferencias hay entre usar una arquitectura basada en XML o en JSON.
+Pregunta 7. Explica el funcionamiento básico de la criptografía de llave simétrica y como se asegura el
+intercambio de la llave.
+Pregunta 8. Explica el funcionamiento básico de la criptografía de llave pública. Explica en un ejemplo
+como podemos firmar un documento y a continuación encriptarlo.
+Pregunta 9. Explica cómo se puede firmar digitalmente con criptografía de llave pública.
+Pregunta 10.
+Explica mediante un ejemplo como funciona un KDC (Key Distribution Center) en
+la criptografía simétrica.
+Pregunta 11.
+Explica para qué sirve y cuál es el mecanismo de funcionamiento de una
+Autoridad de Certificación (CA), indicando si se usa con criptografía de llave simétrica o
+asimétrica.
+Pregunta 12.
+Explica la diferencia de funcionamiento entre un KDC (Key Distribution Center) y
+una Autoridad de Certificación (CA) y con qué tipo de criptografía se usa cada uno de ellos.
+
+1
+
+
