@@ -1,0 +1,125 @@
+PI-Grau
+
+TOPIC 5: Inter-domain Routing (BGP)
+Pregunta 1. Explica que es una política de encaminamiento y como se implementa.
+Pregunta 2. Explica como escala la tabla de encaminamiento BGP en función de la cantidad de AS’s a
+los que está conectado un AS.
+Pregunta 3. ¿Pará que sirve definir una dirección de loopback en un router? ¿Qué tipo de dirección
+es?
+Pregunta 4. ¿Cómo resuelve BGP el problema de los blucles?
+Pregunta 5. ¿Qué diferencia hay entre IBGP e EBGP?
+Pregunta 6. ¿Qué diferencia hay entre las redes que anuncia OSPF y las que anuncia BGP (e.g. con el
+comando network)?
+Pregunta 7. Explica la diferencia entre un atributo BGP conocido (“well-known”) y otro opcional. Idem
+si el atributo es mandatorio y discrecional. Menciona algún atributo que tenga la característica de
+ser conocido y discrecional, otro que sea conocido y mandatorio y otro que sea opcional y
+transitivo.
+Pregunta 8. ¿Qué significa que en una tabla BGP aparezca el atributo ORIGEN como incompleto? ¿Qué
+acción ha ejecutado el administrador del sistema para que aparezca como incompleto? ¿Qué
+efectos tiene dicha acción?
+Pregunta 9. ¿Qué relación hay entre los atributos ATOMIC AGGREGATE y AGGREGATOR?
+Pregunta 10.
+Qué diferencia hay entre una política BGP inbound y una outbound. Qué atributo
+BGP te permite generar una política outbound?
+Pregunta 11.
+¿Qué es una política de “AS-path-prepending?. Explica mediante un ejemplo
+sencillo como un ISP puede usar esta política. ¿Qué atributo BGP permite definir a un ISP una
+política de tráfico de tipo “outbound”? Explica mediante un ejemplo sencillo como un ISP puede
+usar esta política.
+Pregunta 12.
+Explica la diferencia entre una comunidad “NO-EXPORT” y una comunidad “NOADVERTISE”. Pon un ejemplo de uso de cada una de ellas.
+Pregunta 13.
+¿Qué diferencia hay entre asignar un “route-map” con el comando neighbor en
+modo “in” o en modo “out”? ¿Qué efectos tienen ambas acciones sobre la tabla BGP?
+Pregunta 14.
+Justifica porqué los routers BGP tienen que estar i-BGP totalmente mallados y
+explica la diferencia entre el funcionamiento i-BGP y e-BGP respecto al anuncio de rutas.
+Pregunta 15.
+Explica que es multi-homing y explica como se puede implementar una línea de
+back-up con un ISP.
+Pregunta 16.
+Explica que significa que el encaminamiento externo e interno estén
+sincronizados.
+Pregunta 17. Asume que tienes un ISP con 100 routers BGP. Indica cuantas sesiones I-BGP necesita
+para funcionar correctamente. Indica que tecnicas hay para reducir el número de
+sesiones I-BGP y explica brevemente el funcionamiento de una de ellas. Pon un
+ejemplo de las técnicas que has explicado enseñando la reducción de sesiones BGP a
+los 100 routers.
+1
+
+Pregunta 18. Asume que tienes un ISP con 50 routers BGP. Para que funcionen correctamente
+necesitas una red totalmente mallada i-BGP implicando 50*49/2=1225 sesiones i-BGP.
+Explica una técnica que sea capaz de reducir el número de sesiones i-BGP y pon un
+ejemplo con los 50 routers BGP en que se muestre dicha reducción.
+Pregunta 19. Explica el funcionamiento de los reflectores de routas en BGP.
+Pregunta 20. Explica el funcionamiento de las confederaciones en BGP.
+Pregunta 21. Explica los conceptos de escalabilidad, sincronización y convergencia en BGP y como se
+solucionan cada uno de ellos.
+Pregunta 22. Explica cómo puede el AS3 forzar que la línea R3-R1 es backup para la red 12.5.0.0/16
+y principal para la 21.3.0.0/16 y la línea R4-R2 es backup para la red 21.3.0.0/16 y
+principal para la 12.5.0.0/16.
+
+Pregunta 23. Asume que tienes la siguiente red. Explica como AS3 puede definir una comunidad
+para que el tráfico que va desde AS4 hacia las redes X,Y en AS3, vaya preferentemente
+vía R3-RB en vez de usar otras rutas y que el tráfico que va desde AS4 hacia las redes
+W,Z en AS3, vaya preferentemente vía R4-RA.
+AS4
+
+I-BGP
+R3
+
+E-BGP
+
+AS1
+
+T
+
+R4
+
+R2
+
+R1
+
+RA
+W,Z
+
+RB
+
+AS2
+
+AS3
+
+X,Y
+
+Pregunta 24. Asume que tienes la arquitectura de la figura. Explica como AS2 puede definir una
+comunidad para que el tráfico que va desde la red 135.5.5.0/24 en el router R1 vaya a
+la red 121.7.7.0/24 conectada al router R7 preferentemente vía R1-R5 como primera
+opción, vía R1-R2 como segunda opción y finalmente vía R1-R4 como tercera opción
+
+2
+
+Pregunta 25. Asume que tienes un ISP con 100 routers BGP. Para que funcionen correctamente
+necesitas una red totalmente mallada i-BGP. Obten el número total de sesiones iBGP
+necesarias para que funicione correctamente el AS. Definimos ahora una configuración
+con 5 confederaciones: en las 3 primeras confederaciones se configuran reflectores de
+routers (4 Reflectores con 4 clientes cada uno), mientras que en las 2 últimas
+confederaciones no hay reflectores. Obten el numero total de sesiones i-BGP de cada
+confederación y el total de la nueva configuración en el AS.
+Pregunta 26. Calcula el throughput medio y el “oversubscription ratio” de un conmutador con 8
+enlaces de 10 Gb/s en el nivel de agregación y 192 puertos de 1Gb/s de capacidad en
+el nivel de acceso. Si los 192 servidores del nivel de acceso ocupan un 55% del enlace,
+¿Está bien diseñada la red (justifica tu respuesta)?. Si la respuesta es no, indica como
+debería ser el conmutador para soportar los 192 servidores del nivel de acceso.
+Pregunta 27. Explica que es el “flapping”. ¿Para qué sirven las técnicas de “slow-down” en BGP?
+Explica el “exponential back-off”.
+Pregunta 28. Explica que es el dampening en BGP y para qué sirve. Explica el mecanismo de
+dampening y la relación entre el temporizadores half-time, max-supress-limit y el valor
+máximo del supress-limit (dampening threshold).
+Pregunta 29. ¿Qué es y que implicaciones tiene el max-penalty en dampening? Si tienes un penalti =
+1000, un reuse-limit = 2000, un half-life = 15 minutos, y un max-supress-limit = 60
+minutos, ¿Cuál es el valor máximo del supress-limit (dampening theshold) que puedes
+configurar?
+
+3
+
+
